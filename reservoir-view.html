@@ -1,0 +1,1651 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RID MIS Admin</title>
+
+
+    <!--STYLESHEET-->
+    <!--=================================================-->
+    <!--Open Sans Font [ OPTIONAL ]-->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+
+
+    <!--Bootstrap Stylesheet [ REQUIRED ]-->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!--Nifty Stylesheet [ REQUIRED ]-->
+    <link href="css/nifty.min.css" rel="stylesheet">
+
+
+    <!--Nifty Premium Icon [ DEMONSTRATION ]-->
+    <link href="css/demo/nifty-demo-icons.min.css" rel="stylesheet">
+
+
+    <!--Demo [ DEMONSTRATION ]-->
+    <link href="css/demo/nifty-demo.min.css" rel="stylesheet">
+
+
+        
+    <!--Dropzone [ OPTIONAL ]-->
+    <link href="plugins/dropzone/dropzone.css" rel="stylesheet">
+
+    <!--Demo [ DEMONSTRATION ]-->
+    <link href="css/fontTH.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <link href="plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    
+      <!--Bootstrap Timepicker [ OPTIONAL ]-->
+    <link href="plugins/bootstrap-timepicker/bootstrap-timepicker.min.css" rel="stylesheet">
+
+
+    <!--Bootstrap Datepicker [ OPTIONAL ]-->
+    <link href="plugins/bootstrap-datepicker/bootstrap-datepicker.min.css" rel="stylesheet">
+    
+            
+    <!--Magic Checkbox [ OPTIONAL ]-->
+    <link href="plugins/magic-check/css/magic-check.min.css" rel="stylesheet">
+   
+    <!--Switchery [ OPTIONAL ]-->
+    <link href="plugins/switchery/switchery.min.css" rel="stylesheet">
+
+
+    <!--JAVASCRIPT-->
+    <!--=================================================-->
+
+    <!--Pace - Page Load Progress Par [OPTIONAL]-->
+    <link href="plugins/pace/pace.min.css" rel="stylesheet">
+    <script src="plugins/pace/pace.min.js"></script>
+
+
+    <!--jQuery [ REQUIRED ]-->
+    <script src="js/jquery-2.2.4.min.js"></script>
+
+
+    <!--BootstrapJS [ RECOMMENDED ]-->
+    <script src="js/bootstrap.min.js"></script>
+
+
+    <!--NiftyJS [ RECOMMENDED ]-->
+    <script src="js/nifty.min.js"></script>
+   
+    
+    <!--=================================================-->
+    
+    <!--Demo script [ DEMONSTRATION ]-->
+    <script src="js/demo/nifty-demo.min.js"></script>
+    
+    
+       <!--Gmaps [ OPTIONAL ]-->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBrCXuA3G8Wt3z3af-Ba_Uw9NL6dH12bQ&sensor=true">
+    </script>
+	<script src="plugins/gmaps/gmaps.js"></script>
+
+
+    <!--Map Example [ SAMPLE ]-->
+    <script src="js/demo/map-geocoding.js"></script>
+    
+    <!--Switchery [ OPTIONAL ]-->
+    <script src="plugins/switchery/switchery.min.js"></script>
+    
+    <!--Bootstrap Timepicker [ OPTIONAL ]-->
+    <script src="plugins/bootstrap-timepicker/bootstrap-timepicker.min.js"></script>
+
+
+    <!--Bootstrap Datepicker [ OPTIONAL ]-->
+    <script src="plugins/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+    
+    
+    <!--Form Component [ SAMPLE ]-->
+    <script src="js/demo/form-compoment-date-time.js"></script>
+    <script src="js/demo/form-component.js"></script>
+    
+   
+     
+    <!--DataTables [ OPTIONAL ]-->
+    <link href="plugins/datatables/media/css/dataTables.bootstrap.css" rel="stylesheet">
+	<link href="plugins/datatables/extensions/Responsive/css/dataTables.responsive.css" rel="stylesheet">
+   <!--DataTables [ OPTIONAL ]-->
+    <script src="plugins/datatables/media/js/jquery.dataTables.js"></script>
+	<script src="plugins/datatables/media/js/dataTables.bootstrap.js"></script>
+	<script src="plugins/datatables/extensions/Responsive/js/dataTables.responsive.min.js"></script>
+
+
+    <!--DataTables Sample [ SAMPLE ]-->
+    <script src="js/demo/tables-datatables.js"></script>
+    
+    
+
+</head>
+
+<!--TIPS-->
+<!--You may remove all ID or Class names which contain "demo-", they are only used for demonstration. -->
+<body>
+    <div id="container" class="effect aside-float aside-bright mainnav-lg">
+        
+        <!--NAVBAR-->
+        <!--===================================================-->
+        <header id="navbar">
+            <div id="navbar-container" class="boxed">
+
+                <!--Brand logo & name-->
+                <!--================================-->
+                <div class="navbar-header text-center">
+                    <a href="index.html" class="navbar-brand">
+                        <img src="img/logo-rig-2.png" alt="Nifty Logo" class="brand-icon">
+                        <div class="brand-title">
+                            <span class="brand-text font-th" >ระบบการจัดการข้อมูลสารสนเทศ (MIS)</span>
+                        </div>
+                    </a>
+                </div>
+                <!--================================-->
+                <!--End brand logo & name-->
+
+
+                <!--Navbar Dropdown-->
+                <!--================================-->
+                <div class="navbar-content clearfix">
+                    <ul class="nav navbar-top-links pull-left">
+
+                        <!--Navigation toogle button-->
+                        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                        <li class="tgl-menu-btn">
+                            <a class="mainnav-toggle" href="#">
+                                <i class="demo-pli-view-list"></i>
+                            </a>
+                        </li>
+                        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                        <!--End Navigation toogle button-->
+                    </ul>
+                    <ul class="nav navbar-top-links pull-right">
+                        <!--User dropdown-->
+                        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                        <li id="dropdown-user" class="dropdown">
+                            <a href="#" data-toggle="dropdown" class="dropdown-toggle text-right">
+                                <span class="pull-right">
+                                    <!--<img class="img-circle img-user media-object" src="img/profile-photos/1.png" alt="Profile Picture">-->
+                                    <i class="demo-pli-male ic-user"></i>
+                                </span>
+                                <div class="username hidden-xs">Aaron Chavez</div>
+                            </a>
+
+
+                            <div class="dropdown-menu dropdown-menu-md dropdown-menu-right panel-default">
+                                <!-- User dropdown menu -->
+                                <ul class="head-list">
+                                    <li>
+                                        <a href="#">
+                                            <i class="demo-pli-male icon-lg icon-fw"></i> Profile
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="demo-pli-gear icon-lg icon-fw"></i> Settings
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="demo-pli-information icon-lg icon-fw"></i> Help
+                                        </a>
+                                    </li>
+                                </ul>
+
+                                <!-- Dropdown footer -->
+                                <div class="pad-all text-right">
+                                    <a href="pages-login.html" class="btn btn-primary">
+                                        <i class="demo-pli-unlock"></i> Logout
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                        <!--End user dropdown-->
+                    </ul>
+                </div>
+                <!--================================-->
+                <!--End Navbar Dropdown-->
+
+            </div>
+        </header>
+        <!--===================================================-->
+        <!--END NAVBAR-->
+
+        <div class="boxed">
+
+            <!--CONTENT CONTAINER-->
+            <!--===================================================-->
+            <div id="content-container">
+                
+                <div class="row">
+                    <div class="col-md-6">
+                        <!--Page Title-->
+                        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                        <div id="page-title">
+                            <h1 class="page-header text-overflow font-th font-size-header">อ่างเก็บน้ำบางพระ</h1>
+
+                        </div>
+                        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                        <!--End page title-->
+
+
+                        <!--Breadcrumb-->
+                        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                        <ol class="breadcrumb font-th font-size-breadcrumb">
+                            <li><a href="#">ข้อมูลทั่วไป</a></li>
+                            <li class="active">อ่างเก็บน้ำบางพระ</li>
+                        </ol>
+                        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                        <!--End breadcrumb-->
+                    </div>
+                    
+                    <div class="col-md-6 text-right pad-all-big font-th">
+                        <a class="btn btn-purple font-big btn-set-size-big" >ดูรายงาน</a>
+                        <a class="btn btn-save font-big btn-set-size-big" href="reservoir-newedit.html">แก้ไขข้อมูล</a>
+                    </div>
+                </div>
+
+        
+
+                <!--Page content-->
+                <!--===================================================-->
+                <div id="page-content" class="font-th page-view">
+                 	
+                <!-- Add Row -->
+					<!--===================================================-->
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <!--Reservoir Number-->
+                            <!--===================================================-->
+                            <div class="panel media middle">
+                                <div class="media-left bg-lightblue pad-medium ">
+                                    <i class="fa fa-file-text icon-counter"></i>
+                                </div>
+                                <div class="media-body pad-medium ">
+                                    <p class="text-muted mar-no text-semibold">หมายเลขอ่างเก็บน้ำ</p>
+                                    <p class="text-panel mar-no text-semibold text-center">12343253253525325</p>
+                                </div>
+                            </div>
+                            <!--===================================================-->
+                            <!--Reservoir สำนักชลประทาน-->
+                            <!--===================================================-->
+                            <div class="panel media middle">
+                                <div class="media-left bg-lightgreen pad-medium ">
+                                    <i class="fa fa-clipboard icon-counter"></i>
+                                </div>
+                                <div class="media-body pad-medium ">
+                                    <p class="text-muted mar-no text-semibold">สำนักชลประทาน</p>
+                                    <p class="text-panel mar-no text-semibold text-center">สำนักชลประทานที่ 16</p>
+                                </div>
+                            </div>
+                            <!--===================================================-->
+                            <!--Reservoir picture -->
+                            <!--===================================================-->
+                            <div class="panel media middle pad-all-small">
+                                <img src="img/IMG_0987.jpg" class="img-responsive"/>
+                            </div>
+                            <!--===================================================-->
+                            <!--Reservoir Map -->
+                            <!--===================================================-->
+                            <div class="panel media middle pad-all-small">
+                                <!-- Marker -->
+                                <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                                <div id="demo-marker-map" style="height:200px"></div>
+                                <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                            </div>
+                            <!--===================================================-->
+                            <!--Reservoir Last Modified-->
+                            <!--===================================================-->
+                            <div class="panel media middle">
+                                <div class="media-body pad-medium ">
+                                    <p class="text-muted mar-no text-semibold">ข้อมูลแก้ไขล่าสุด</p>
+                                    <p class="text-panel mar-no text-semibold text-center"> สมชาย เกียรติคุณ<br/>23/12/2559 20:39 น.</p>
+                                </div>
+                            </div>
+                        </div>
+					    <div class="col-lg-9">
+					        <!--Default Tabs (Left Aligned)-->
+					        <!--===================================================-->
+					        <div class="tab-base">
+					            <!--Nav Tabs-->
+					            <ul id="form-wizard" class="nav nav-tabs " style="font-size: 0.92em !important;">
+					                <li class="active">
+					                    <a role="tab" data-toggle="tab" id="tab-map"  href="#tab-1">รายละเอียดและสถานที่ตั้ง</a>
+					                </li>
+					              
+                                    <li>
+					                    <a role="tab" data-toggle="tab"  href="#tab-2">โครงสร้างอ่างเก็บน้ำ</a>
+                                    </li>
+                                    <li>
+					                    <a role="tab" data-toggle="tab"  href="#tab-3">เขื่อน</a>
+					                </li>
+                                    <li>
+					                    <a role="tab" data-toggle="tab" href="#tab-4">รูปภาพและแบบก่อสร้าง</a>
+					                </li>
+                                    <li>
+					                    <a role="tab" data-toggle="tab"  href="#tab-5">วีดีทัศน์</a>
+					                </li>
+                                     <li>
+					                    <a role="tab" data-toggle="tab" href="#tab-6">รายงานต่างๆ</a>
+					                </li>
+                                    
+					                <li>
+					                    <a role="tab" data-toggle="tab"  href="#tab-7">DAMS</a>
+					                </li>
+					            </ul>
+					
+					            <!--Tabs Content-->
+					            <div class="tab-content">
+					                <div id="tab-1" class="tab-pane fade  active in form-wizard-content">
+                                       <form  class="form-horizontal">
+					                    <div class="section margin-vertical--small" >
+                                            <div class="section-title" data-toggle="collapse" data-target="#section1">
+                                                <a class="section-title-info">
+                                                  <i class="fa fa-angle-down font-size-small" aria-hidden="true"></i> ข้อมูลทั่วไป
+                                                </a>
+                                            </div>
+                                            <div id="section1" class="collapse in panel-body pad-ver-none-small">
+                                                <div class="row">
+                                                    <div class="form-group col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                                        <div class="row margin-vertical--small">
+                                                            <label for="demo-is-inputnormal" class="col-sm-12 control-label text-left">ชื่อโครงการ</label>
+                                                            <div class="col-sm-12">
+                                                                <input type="text"  class="form-control read-only" readonly value="โครงการอ่างเก็บน้ำบางพระ"/>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row margin-vertical--small">
+                                                            <label for="demo-is-inputnormal" class="col-sm-12 control-label text-left">ชื่อโครงการภาษาอังกฤษ</label>
+                                                            <div class="col-sm-12">
+                                                                <input type="text"  class="form-control read-only" readonly value="Bang Phra Reservoir"/>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row margin-vertical--small">
+                                                            <label for="demo-is-inputnormal" class="col-sm-12 control-label text-left">ชื่ออื่นโครงการ</label>
+                                                            <div class="col-sm-12">
+                                                                <input type="text"  class="form-control read-only" readonly />
+                                                            </div>
+                                                        </div>
+                                                        <div class="row margin-vertical--small">
+                                                            <label for="demo-is-inputnormal" class="col-sm-12 control-label text-left">ลักษณะโครงการ</label>
+                                                            <div class="col-sm-12">
+                                                             <textarea class="form-control read-only" readonly></textarea>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                                        <div class="row margin-vertical--small">
+                                                            <label for="demo-is-inputnormal" class="col-sm-12 control-label text-left">สภาพการใช้งาน</label><br/>
+                                                            <div class="col-sm-12">
+                                                                <input id="isReadytoUse" class="magic-checkbox" type="checkbox" checked readonly/>
+                                                                <label for="demo-form-inline-checkbox" class="font-size-form">พร้อมใช้งาน</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row margin-vertical--small">
+                                                            <label for="demo-is-inputnormal" class="col-sm-12 control-label text-left">สำนักชลประทาน</label>
+                                                            <div class="col-sm-12">
+                                                                <input type="text"  class="form-control read-only" readonly />
+                                                            </div>
+                                                        </div>
+                                                        <div class="row margin-vertical--small">
+                                                            <label for="demo-is-inputnormal" class="col-sm-12 control-label text-left">ขนาดโครงการ</label>
+                                                            <div class="col-sm-12">
+                                                                <input type="text"  class="form-control read-only" readonly />
+                                                            </div>
+                                                        </div>
+                                                        <div class="row margin-vertical--small">
+                                                            <label for="demo-is-inputnormal" class="col-sm-12 control-label text-left">ประโยชน์การใช้งาน</label>
+                                                            <div class="col-sm-12">
+                                                             <textarea class="form-control read-only" readonly></textarea>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                
+                                                </div>
+                                                <div class="row">
+                                                    <div class="form-group col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                                        <div class="row  margin-vertical--small">
+                                                            <label for="demo-is-inputnormal" class="col-sm-12 control-label text-left">หมายเหตุ</label>
+                                                            <div class="col-sm-12">
+                                                             <textarea class="form-control read-only" readonly></textarea>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                           </div>
+                                        </div>
+                                        <!--====== Section 1 ========-->
+                                        <div class="section margin-vertical--small" >
+                                            <div class="section-title" data-toggle="collapse" data-target="#section2">
+                                                <a class="section-title-info">
+                                                  <i class="fa fa-angle-down font-size-small" aria-hidden="true"></i> ข้อมูลการก่อสร้างสร้างและการถ่ายโอน
+                                                </a>
+                                            </div>
+                                            <div id="section2" class="collapse in panel-body pad-ver-none-small">
+                                                <div class="row">
+                                                    <div class="form-group col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                                        <div class="row margin-vertical--small">
+                                                            <label for="demo-is-inputnormal" class="col-sm-12 text-left control-label">เจ้าของโครงการ</label>
+                                                            <div class="col-sm-12">
+                                                                <input type="text"  class="form-control read-only" readonly />
+                                                            </div>
+                                                        </div>
+                                                        <div class="row margin-vertical--small">
+                                                            <label for="demo-is-inputnormal" class="col-sm-12 text-left control-label">ผู้ออกแบบ</label>
+                                                            <div class="col-sm-12">
+                                                                 <input type="text"   class="form-control read-only" readonly />
+                                                            </div>
+                                                        </div>
+                                                        <div class="row margin-vertical--small">
+                                                            <label for="demo-is-inputnormal" class="col-sm-12 text-left control-label">ผู้รับเหมา</label>
+                                                            <div class="col-sm-12">
+                                                                 <input type="text"   class="form-control read-only" readonly />
+                                                            </div>
+                                                        </div>
+                                                        <div class="row margin-vertical--small">
+                                                            <label for="demo-is-inputnormal" class="col-sm-12 text-left control-label">ปีที่เริ่มก่อสร้าง</label>
+                                                            <div class="col-sm-12">
+                                                                 <input type="number"   class="form-control read-only" readonly />
+                                                            </div>
+                                                        </div>
+                                                        <div class="row margin-vertical--small">
+                                                            <label for="demo-is-inputnormal" class="col-sm-12 text-left control-label">ปีที่สร้างแล้วเสร็จ</label>
+                                                            <div class="col-sm-12">
+                                                                 <input type="number"   class="form-control read-only" readonly />
+                                                            </div>
+                                                        </div>
+                                                        
+                                                    </div>
+                                                    <div class="form-group col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                                        <div class="row margin-vertical--small">
+                                                            <label for="demo-is-inputnormal" class="col-sm-12 text-left control-label">การถ่ายโอน</label>
+                                                            <div class="col-sm-12">
+                                                              <input id="isTransfer" class="magic-checkbox" readonly type="checkbox" checked>
+					                                           <label for="demo-form-inline-checkbox" class="font-size-form">มีการถ่ายโอน</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row margin-vertical--small">
+                                                            <label for="demo-is-inputnormal" class="col-sm-12 text-left control-label">หน่วยงานที่รับถ่ายโอน</label>
+                                                            <div class="col-sm-12">
+                                                                <input type="text"  class="form-control read-only" readonly />
+                                                            </div>
+                                                        </div>
+                                                         <div class="row margin-vertical--small">
+                                                            <label for="demo-is-inputnormal" class="col-sm-12 text-left control-label">ปีที่ถ่ายโอน</label>
+                                                            <div class="col-sm-12">
+                                                                <input type="number"   class="form-control read-only" readonly />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                
+                                                </div>
+                                           </div>
+                                        </div>
+                                        <!--====== Section 2 ========-->
+                                         <div class="section margin-vertical--small" >
+                                            <div class="section-title" data-toggle="collapse" data-target="#section3">
+                                                <a class="section-title-info">
+                                                  <i class="fa fa-angle-down font-size-small" aria-hidden="true"></i> ข้อมูสถานที่ตั้ง
+                                                </a>
+                                            </div>
+                                            <div id="section3" class="collapse in panel-body pad-ver-none-small">
+                                                <div class="row">
+                                                    <div class="form-group col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                                        <div class="row ">
+                                                            <label for="demo-is-inputnormal" class="col-sm-12 text-left control-label">หมู่ที่</label>
+                                                            <div class="col-sm-12">
+                                                                <input type="text"  class="form-control read-only" readonly/>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                                        <div class="row ">
+                                                            <label for="demo-is-inputnormal" class="col-sm-12 text-left  control-label">หมู่บ้าน</label>
+                                                            <div class="col-sm-12">
+                                                                 <input type="text"  class="form-control read-only" readonly/>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="form-group col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                                        <div class="row margin-vertical--small">
+                                                            <label for="demo-is-inputnormal" class="col-sm-12 text-left  control-label">จังหวัด</label>
+                                                            <div class="col-sm-12">
+                                                                 <input type="text"  class="form-control read-only" readonly/>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row margin-vertical--small">
+                                                            <label for="demo-is-inputnormal" class="col-sm-12 text-left control-label">อำเภอ</label>
+                                                            <div class="col-sm-12">
+                                                                 <input type="text"  class="form-control read-only" readonly/>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row ">
+                                                            <label for="demo-is-inputnormal" class="col-sm-12 text-left control-label">ตำบล</label>
+                                                            <div class="col-sm-12">
+                                                                <input type="text"  class="form-control read-only" readonly/>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                                        <div class="row margin-vertical--small">
+                                                            <label for="demo-is-inputnormal" class="col-sm-12 text-left  control-label">แม่น้ำ</label>
+                                                            <div class="col-sm-12">
+                                                                 <input type="text"  class="form-control read-only" readonly/>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row margin-vertical--small">
+                                                            <label for="demo-is-inputnormal" class="col-sm-12 text-left  control-label">ลุ่มน้ำ</label>
+                                                            <div class="col-sm-12">
+                                                                 <input type="text"  class="form-control read-only" readonly/>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                           </div>
+                                        </div>
+                                        <!--====== End Section 3 ========-->
+                                        <div class="section margin-vertical--small" >
+                                            <div class="section-title" data-toggle="collapse" data-target="#section4">
+                                                <a class="section-title-info">
+                                                  <i class="fa fa-angle-down font-size-small" aria-hidden="true"></i> ข้อมูสพิกัดที่ตั้ง
+                                                </a>
+                                            </div>
+                                            <div id="section4" class="collapse in panel-body pad-ver-none-small">
+                                                <div class="row">
+                                                    <div class="form-group col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                                        <div class="row margin-vertical--small">
+                                                            <label for="demo-is-inputnormal" class="col-sm-12 text-left  control-label">ชุดแผนที่</label>
+                                                            <div class="col-sm-12">
+                                                              <input id="isSpecialMap" class="magic-checkbox" type="checkbox" checked readonly/>
+					                                           <label for="demo-form-inline-checkbox" class="font-size-form">L7017/L7018</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row margin-vertical--small">
+                                                            <label for="demo-is-inputnormal" class="col-sm-12 text-left  control-label">พิกัด</label>
+                                                            <div class="col-sm-12">
+                                                                 <input type="text"  class="form-control read-only" readonly/>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row ">
+                                                            <label for="demo-is-inputnormal" class="col-sm-12 text-left  control-label">ระวางแผนที่</label>
+                                                            <div class="col-sm-12">
+                                                                 <input type="text"  class="form-control read-only" readonly/>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                                        <div class="row margin-vertical--small">
+                                                            <label for="demo-is-inputnormal" class="col-sm-12 text-left  control-label">ระยะตะวันออก</label>
+                                                            <div class="col-sm-12">
+                                                                 <input type="text"  class="form-control read-only" readonly/>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row margin-vertical--small">
+                                                            <label for="demo-is-inputnormal" class="col-sm-12 text-left  control-label">ระยะตะวันตก</label>
+                                                            <div class="col-sm-12">
+                                                                 <input type="text"  class="form-control read-only" readonly/>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row margin-vertical--small">
+                                                            <label for="demo-is-inputnormal" class="col-sm-12 text-left  control-label">ขอบเขต</label>
+                                                            <div class="col-sm-12">
+                                                                 <input type="text"  class="form-control read-only" readonly/>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="form-group col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                                        <div class="row ">
+                                                            <label for="demo-is-inputnormal" class="col-sm-12 text-left control-label">ละติจูด</label>
+                                                            <div class="col-sm-12">
+                                                                <input type="text"  class="form-control read-only" readonly/>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                                        <div class="row ">
+                                                            <label for="demo-is-inputnormal" class="col-sm-12 text-left control-label">ลองจิจูด</label>
+                                                            <div class="col-sm-12">
+                                                                 <input type="text"  class="form-control read-only" readonly/>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+					                    </div>
+                                       </div>
+                                        </form>
+					                </div>
+					                <div id="tab-2" class="tab-pane fade form-wizard-content">
+					                    <form  class="form-horizontal">
+					                    <div class="section margin-vertical--small" >
+                                            <div class="section-title" data-toggle="collapse" data-target="#section201">
+                                                <a class="section-title-info">
+                                                  <i class="fa fa-angle-down font-size-small" aria-hidden="true"></i> ข้อมูลทำนบ
+                                                </a>
+                                            </div>
+                                            <div id="section201" class="collapse in panel-body pad-ver-none-small">
+                                                <div class="row">
+                                                    <div class="form-group col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                                        <div class="row margin-vertical--small">
+                                                            <label for="demo-is-inputnormal" class="col-sm-12 text-left control-label">พื้นที่โครงการ (ตร.กม.)</label>
+                                                            <div class="col-sm-12">
+                                                                <input type="number"  class="form-control read-only" readonly/>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row margin-vertical--small">
+                                                            <label for="demo-is-inputnormal" class="col-sm-12 text-left control-label">พื้นที่รับน้ำฝน (ตร.กม.)</label>
+                                                            <div class="col-sm-12">
+                                                                <input type="number"  class="form-control read-only" readonly/>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row margin-vertical--small">
+                                                            <label for="demo-is-inputnormal" class="col-sm-12 text-left control-label">พื้นที่ชลประทาน (ตร.กม.)</label>
+                                                            <div class="col-sm-12">
+                                                                <input type="number"  class="form-control read-only" readonly/>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row margin-vertical--small">
+                                                            <label for="demo-is-inputnormal" class="col-sm-12 text-left control-label">พื้นที่ประโยชน์อื่นๆ (ตร.กม.)</label>
+                                                            <div class="col-sm-12">
+                                                                <input type="number"  class="form-control read-only" readonly/>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row margin-vertical--small">
+                                                            <label for="demo-is-inputnormal" class="col-sm-12 text-left control-label">ชุมชนใกล้เคียง</label>
+                                                            <div class="col-sm-12">
+                                                                 <input type="text"  class="form-control read-only" readonly/>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row margin-vertical--small">
+                                                            <label for="demo-is-inputnormal" class="col-sm-12 text-left control-label">ระยะห่างจากชุมชน</label>
+                                                            <div class="col-sm-12">
+                                                                <input type="number"  class="form-control read-only" readonly/>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row margin-vertical--small">
+                                                            <label for="demo-is-inputnormal" class="col-sm-12 text-left control-label">EPP</label>
+                                                            <div class="col-sm-12">
+                                                              <input id="isQC" class="magic-checkbox" type="checkbox" checked readonly/>
+					                                           <label for="demo-form-inline-checkbox" class="font-size-form">ได้รับการประเมิน</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                                        <div class="row margin-vertical--small">
+                                                            <label for="demo-is-inputnormal" class="col-sm-12 text-left control-label">ความยาว (ม.)</label>
+                                                            <div class="col-sm-12">
+                                                                <input type="number"  class="form-control read-only" readonly/>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row margin-vertical--small">
+                                                            <label for="demo-is-inputnormal" class="col-sm-12 text-left control-label">ความสูง (ม.)</label>
+                                                            <div class="col-sm-12">
+                                                                <input type="number"  class="form-control read-only" readonly/>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row margin-vertical--small">
+                                                            <label for="demo-is-inputnormal" class="col-sm-12 text-left control-label">ระดับน้ำสูงสุด (ม.)</label>
+                                                            <div class="col-sm-12">
+                                                                <input type="number"  class="form-control read-only" readonly/>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row margin-vertical--small">
+                                                            <label for="demo-is-inputnormal" class="col-sm-12 text-left control-label">ระดับน้ำต่ำสุด (ม.)</label>
+                                                            <div class="col-sm-12">
+                                                                <input type="number"  class="form-control read-only" readonly/>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row margin-vertical--small">
+                                                            <label for="demo-is-inputnormal" class="col-sm-12 text-left control-label">ระดับน้ำกักเก็บ (ม.)</label>
+                                                            <div class="col-sm-12">
+                                                                <input type="number"  class="form-control read-only" readonly/>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row margin-vertical--small">
+                                                            <label for="demo-is-inputnormal" class="col-sm-12 text-left control-label">ระดับเตือนภัย Economic</label>
+                                                            <div class="col-sm-12">
+                                                                <input type="number"  class="form-control read-only" readonly/>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row margin-vertical--small">
+                                                            <label for="demo-is-inputnormal" class="col-sm-12 text-left control-label">ระดับเตือนภัย Population</label>
+                                                            <div class="col-sm-12">
+                                                                <input type="number"  class="form-control read-only" readonly/>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                
+                                                </div>
+                                           </div>
+                                        </div>
+                                        <!--====== Section 1 ========-->
+                                        <div class="section margin-vertical--small" >
+                                            <div class="section-title" data-toggle="collapse" data-target="#section202">
+                                                <a class="section-title-info">
+                                                  <i class="fa fa-angle-down font-size-small" aria-hidden="true"></i> ข้อมูลปริมาณน้ำ
+                                                </a>
+                                            </div>
+                                            <div id="section202" class="collapse in panel-body pad-ver-none-small">
+                                                <div class="row">
+                                                    <div class="form-group col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                                        <div class="row margin-vertical--small">
+                                                            <label for="demo-is-inputnormal" class="col-sm-12 text-left control-label">ปริมาณอ่างเก็บน้ำ (ล้าน ลบ.ม.)</label>
+                                                            <div class="col-sm-12">
+                                                                <input type="number"  class="form-control read-only" readonly/>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row margin-vertical--small">
+                                                            <label for="demo-is-inputnormal" class="col-sm-12 text-left control-label">ปริมาณน้ำสำรองใช้ (ล้าน ลบ.ม.)</label>
+                                                            <div class="col-sm-12">
+                                                                 <input type="number"  class="form-control read-only" readonly/>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row margin-vertical--small">
+                                                            <label for="demo-is-inputnormal" class="col-sm-12 text-left control-label">ปริมาณน้ำกักเก็บชั่วคราว (ล้าน ลบ.ม.)</label>
+                                                            <div class="col-sm-12">
+                                                                 <input type="number"  class="form-control read-only" readonly/>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row margin-vertical--small">
+                                                            <label for="demo-is-inputnormal" class="col-sm-12 text-left control-label">ปริมาณระดับน้ำสูงสุด</label>
+                                                            <div class="col-sm-12">
+                                                                 <input type="number"  class="form-control read-only" readonly/>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row margin-vertical--small">
+                                                            <label for="demo-is-inputnormal" class="col-sm-12 text-left control-label">ปริมาณระดับน้ำต่ำสุด</label>
+                                                            <div class="col-sm-12">
+                                                                 <input type="number"  class="form-control read-only" readonly/>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row margin-vertical--small">
+                                                            <label for="demo-is-inputnormal" class="col-sm-12 text-left control-label">ปริมาณระดับน้ำกักเก็บ</label>
+                                                            <div class="col-sm-12">
+                                                                 <input type="number"  class="form-control read-only" readonly/>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row margin-vertical--small">
+                                                            <label for="demo-is-inputnormal" class="col-sm-12 text-left control-label">ระยะเวลาน้ำถึงระดับสูงสุด</label>
+                                                            <div class="col-sm-12">
+                                                                 <input type="number"  class="form-control read-only" readonly/>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                                        <div class="row margin-vertical--small">
+                                                            <label for="demo-is-inputnormal" class="col-sm-12 text-left control-label">ปริมาณฝนตกเฉลี่ยทั้งปี</label>
+                                                            <div class="col-sm-12">
+                                                                 <input type="number"  class="form-control read-only" readonly/>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row margin-vertical--small">
+                                                            <label for="demo-is-inputnormal" class="col-sm-12 text-left control-label">ปริมาณน้ำทั้งปีที่ไหลลงอ่างเก็บน้ำ</label>
+                                                            <div class="col-sm-12">
+                                                                 <input type="number"  class="form-control read-only" readonly/>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row margin-vertical--small">
+                                                            <label for="demo-is-inputnormal" class="col-sm-12 text-left control-label">ปริมาณน้ำเพื่อการอุปโภค-บริโภค</label>
+                                                            <div class="col-sm-12">
+                                                                 <input type="number"  class="form-control read-only" readonly/>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row margin-vertical--small">
+                                                            <label for="demo-is-inputnormal" class="col-sm-12 text-left control-label">ปริมาณน้ำหลากออกแบบ</label>
+                                                            <div class="col-sm-12">
+                                                                 <input type="number"  class="form-control read-only" readonly/>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row margin-vertical--small">
+                                                            <label for="demo-is-inputnormal" class="col-sm-12 text-left control-label">อัตราการไหลสูงสุดของน้ำหลากออกแบบ</label>
+                                                            <div class="col-sm-12">
+                                                                 <input type="number"  class="form-control read-only" readonly/>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row margin-vertical--small">
+                                                            <label for="demo-is-inputnormal" class="col-sm-12 text-left control-label">ช่วงเวลาน้ำหลากออกแบบ</label>
+                                                            <div class="col-sm-12">
+                                                                 <input type="number"  class="form-control read-only" readonly/>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row margin-vertical--small">
+                                                            <label for="demo-is-inputnormal" class="col-sm-12 text-left control-label">ระยะเวลาน้ำหลากออกแบบ</label>
+                                                            <div class="col-sm-12">
+                                                                 <input type="number"  class="form-control read-only" readonly/>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                
+                                                </div>
+                                           </div>
+                                        </div>
+                                        <!--====== Section 2 ========-->
+                                        <div class="section margin-vertical--small" >
+                                            <div class="section-title" data-toggle="collapse" data-target="#section203">
+                                                <a class="section-title-info">
+                                                  <i class="fa fa-angle-down font-size-small" aria-hidden="true"></i> ข้อมูลระบบส่งน้ำและอาคารประกอบ
+                                                </a>
+                                            </div>
+                                            <div id="section203" class="collapse in panel-body pad-ver-none-small">
+                                                <div class="row">
+                                                    <div class="col-md-3">
+                                                        <label class="control-label" style="margin-top: 8px;  font-size:1.5em !important;">ทางระบายน้ำลงลำน้ำเดิม</label>
+                                                    </div>
+                                                    <div class="col-md-9">
+                                                        <div class="row">
+                                                            <div class="col-sm-6 margin-vertical--small">
+                                                                <label for="demo-is-inputnormal" class="col-sm-12 text-left control-label">ขนาด</label>
+                                                                <div class="col-sm-12">
+                                                                     <input type="number"  class="form-control read-only" readonly/>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-6 margin-vertical--small">
+                                                                <label class="col-sm-12 text-left control-label ">ความสามารถในการระบายน้ำ</label>
+                                                                <div class="col-sm-12">
+                                                                     <input type="number"  class="form-control read-only" readonly/>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-3">
+                                                        <label class="control-label" style="margin-top: 8px;  font-size:1.5em !important;">ทางระบายน้ำลงฝั่งซ้าย</label>
+                                                    </div>
+                                                    <div class="col-md-9">
+                                                        <div class="row">
+                                                            <div class="col-sm-6 margin-vertical--small">
+                                                                <label for="demo-is-inputnormal" class="col-sm-12 text-left control-label">ขนาด</label>
+                                                                <div class="col-sm-12">
+                                                                     <input type="number"  class="form-control read-only" readonly/>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-6 margin-vertical--small">
+                                                                <label class="col-sm-12 text-left control-label ">ความสามารถในการระบายน้ำ</label>
+                                                                <div class="col-sm-12">
+                                                                     <input type="number"  class="form-control read-only" readonly/>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                               <div class="row">
+                                                    <div class="col-md-3">
+                                                        <label class="control-label" style="margin-top: 8px;  font-size:1.5em !important;">ทางระบายน้ำลงฝั่งขวา</label>
+                                                    </div>
+                                                    <div class="col-md-9">
+                                                        <div class="row">
+                                                            <div class="col-sm-6 margin-vertical--small">
+                                                                <label for="demo-is-inputnormal" class="col-sm-12 text-left control-label">ขนาด</label>
+                                                                <div class="col-sm-12">
+                                                                     <input type="number"  class="form-control read-only" readonly/>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-6 margin-vertical--small">
+                                                                <label class="col-sm-12 text-left control-label ">ความสามารถในการระบายน้ำ</label>
+                                                                <div class="col-sm-12">
+                                                                     <input type="number"  class="form-control read-only" readonly/>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-3">
+                                                        <label class="control-label" style="margin-top: 8px;  font-size:1.5em !important;">อาคารระบายน้ำล้นปกติ</label>
+                                                    </div>
+                                                    <div class="col-md-9">
+                                                        <div class="row">
+                                                            <div class="col-sm-6 margin-vertical--small">
+                                                                <label for="demo-is-inputnormal" class="col-sm-12 text-left control-label">ประเภท</label>
+                                                                <div class="col-sm-12">
+                                                                     <input type="number"  class="form-control read-only" readonly/>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-6 margin-vertical--small">
+                                                                <label class="col-sm-12 text-left control-label ">ระดับสันอาคารระบายน้ำ</label>
+                                                                <div class="col-sm-12">
+                                                                     <input type="number"  class="form-control read-only" readonly/>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-sm-6 margin-vertical--small">
+                                                                <label for="demo-is-inputnormal" class="col-sm-12 text-left control-label">ขนาด</label>
+                                                                <div class="col-sm-12">
+                                                                     <input type="number"  class="form-control read-only" readonly/>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-6 margin-vertical--small">
+                                                                <label class="col-sm-12 text-left control-label ">ความสามารถในการระบายน้ำ</label>
+                                                                <div class="col-sm-12">
+                                                                     <input type="number"  class="form-control read-only" readonly/>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-3">
+                                                        <label class="control-label" style="margin-top: 8px; font-size:1.5em !important;">อาคารระบายน้ำล้นฉุกเฉิน</label>
+                                                    </div>
+                                                    <div class="col-md-9">
+                                                        <div class="row">
+                                                            <div class="col-sm-6 margin-vertical--small">
+                                                                <label for="demo-is-inputnormal" class="col-sm-12 text-left control-label">ประเภท</label>
+                                                                <div class="col-sm-12">
+                                                                     <input type="number"  class="form-control read-only" readonly/>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-6 margin-vertical--small">
+                                                                <label class="col-sm-12 text-left control-label ">ระดับสันอาคารระบายน้ำ</label>
+                                                                <div class="col-sm-12">
+                                                                     <input type="number"  class="form-control read-only" readonly/>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-sm-6 margin-vertical--small">
+                                                                <label for="demo-is-inputnormal" class="col-sm-12 text-left control-label">ขนาด</label>
+                                                                <div class="col-sm-12">
+                                                                     <input type="number"  class="form-control read-only" readonly/>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-6 margin-vertical--small">
+                                                                <label class="col-sm-12 text-left control-label ">ความสามารถในการระบายน้ำ</label>
+                                                                <div class="col-sm-12">
+                                                                     <input type="number"  class="form-control read-only" readonly/>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                       </form>
+                                    </div>
+					                <div id="tab-3" class="tab-pane fade form-wizard-content">
+					                   <div class="row pad-all">
+                                            <button class="btn btn-mint ">เพิ่มเขื่อนที่เกี่ยวข้อง</button>
+                                       </div>
+					                   <div class="section margin-vertical--small" >
+                                            <div class="section-title" data-toggle="collapse" data-target="#section301">
+                                                <a class="section-title-info">
+                                                  <i class="fa fa-angle-down font-size-small" aria-hidden="true"></i> ข้อมูลเขื่อน
+                                                </a>
+                                            </div>
+                                            <div id="section301" class="collapse in panel-body">
+                                                <table id="dam-table" class="table table-striped text-bold" cellspacing="0" width="100%">
+                                                    <thead>
+                                                        <tr>
+                                                            <th class="min-desktop text-center" style="vertical-align:top; width: 60px;"></th>
+                                                            <th class="min-desktop text-center" style="vertical-align:top;">หมายเลขเขื่อน</th>
+                                                            <th class="min-desktop text-center" style="vertical-align:top;">ชื่อเขื่อน</th>
+                                                            <th class="min-desktop text-center" style="vertical-align:top;">สำนักชลประทาน</th>
+                                                            <th class="min-desktop text-center" style="vertical-align:top;">ประเภทเขื่อน</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="text-center"  style="width: 60px;"><a href="#" class="text-primary-color">Edit</a> | <a href="#" class="text-primary-color">Delete</a></td>
+                                                            <td class="text-center"><a href="#" class="text-primary-color">12343253253525325</a></td>
+                                                            <td class="text-center">เขื่อนรัชชประภา</td>
+                                                            <td class="text-center">สำนักชลประทานที่ 16</td>
+                                                            <td class="text-center">เขื่อนหลัก</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-center"  style="width: 60px;"><a href="#" class="text-primary-color">Edit</a> | <a href="#" class="text-primary-color">Delete</a></td>
+                                                            <td class="text-center"><a href="#" class="text-primary-color">12343253253525325</a></td>
+                                                            <td class="text-center">เขื่อน A</td>
+                                                            <td class="text-center">สำนักชลประทานที่ 16</td>
+                                                            <td class="text-center">เขื่อนหลัก</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-center"  style="width: 60px;"><a href="#" class="text-primary-color">Edit</a> | <a href="#" class="text-primary-color">Delete</a></td>
+                                                            <td class="text-center"><a href="#" class="text-primary-color">12343253253525325</a></td>
+                                                            <td class="text-center">เขื่อน B</td>
+                                                            <td class="text-center">สำนักชลประทานที่ 16</td>
+                                                            <td class="text-center">เขื่อนหลัก</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                           </div>
+                                        </div>
+                                        <!--====== Section 1 ========-->
+					                </div>
+                                    <div id="tab-4" class="tab-pane fade form-wizard-content">
+                                        <div class="section margin-vertical--small" >
+                                                <div class="section-title" data-toggle="collapse" data-target="#section201">
+                                                    <a class="section-title-info">
+                                                      <i class="fa fa-angle-down font-size-small" aria-hidden="true"></i> รูปภาพทั้งหมดในระบบ
+                                                    </a>
+                                                </div>
+                                                <div id="section201" class="collapse in panel-body pad-no">
+                                                   <div class="row pad-ver">
+                                                        <div class="col-md-6" style="padding-top: 5px; padding-left: 5px !important;">
+                                                            <div class="col-sm-4" style="padding-top: 7px;">
+                                                                <button class="btn btn-small-toggle btn-select">
+                                                                    <i class="fa fa-th-list"></i>
+                                                                </button>
+                                                                <button class="btn btn-small-toggle btn-select">
+                                                                    <i class="fa fa-th-large"></i>
+                                                                </button>
+                                                            </div>
+                                                            <div class="form-group col-sm-8" style="width: 60%;">
+                                                                <label for="demo-is-inputnormal" class="control-label">Catagory</label>
+                                                                <select class="form-control" style="border:1px solid #e9e9e9;">
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group col-md-12 pull-right">
+                                                                <label for="demo-is-inputnormal" class="control-label">ค้นหา</label>
+                                                                <div class="">
+                                                                    <input type="text"  class="form-control" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div> 
+                                                    <div class="row pad-hor-small" >
+                                                        <div class="col-md-3" >
+                                                            <a data-toggle="modal" data-target="#examplePicture">
+                                                                <img src="img/example_image.png" class="img-responsive"/>
+                                                                <p class="text-uploader">สมชาย สวัสดี</p>
+                                                                <p class="text-upload-date">23/04/2560 14:45</p>
+                                                            </a>
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <img src="img/example_image.png" class="img-responsive"/>
+                                                            <p class="text-uploader">สมชาย สวัสดี</p>
+                                                            <p class="text-upload-date">23/04/2560 14:45</p>
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <img src="img/example_image.png" class="img-responsive"/>
+                                                            <p class="text-uploader">สมชาย สวัสดี</p>
+                                                            <p class="text-upload-date">23/04/2560 14:45</p>
+                                                        </div>
+                                                        <div class="col-md-3"  >
+                                                            <img src="img/example_image.png" class="img-responsive"/>
+                                                            <p class="text-uploader">สมชาย สวัสดี</p>
+                                                            <p class="text-upload-date">23/04/2560 14:45</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row pad-hor-small" >
+                                                        <div class="col-md-3" >
+                                                            <a data-toggle="modal" data-target="#examplePicture">
+                                                                <img src="img/example_image.png" class="img-responsive"/>
+                                                                <p class="text-uploader">สมชาย สวัสดี</p>
+                                                                <p class="text-upload-date">23/04/2560 14:45</p>
+                                                            </a>
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <img src="img/example_image.png" class="img-responsive"/>
+                                                            <p class="text-uploader">สมชาย สวัสดี</p>
+                                                            <p class="text-upload-date">23/04/2560 14:45</p>
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <img src="img/example_image.png" class="img-responsive"/>
+                                                            <p class="text-uploader">สมชาย สวัสดี</p>
+                                                            <p class="text-upload-date">23/04/2560 14:45</p>
+                                                        </div>
+                                                        <div class="col-md-3"  >
+                                                            <img src="img/example_image.png" class="img-responsive"/>
+                                                            <p class="text-uploader">สมชาย สวัสดี</p>
+                                                            <p class="text-upload-date">23/04/2560 14:45</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row pad-hor-small" >
+                                                        <div class="col-md-3" >
+                                                            <a data-toggle="modal" data-target="#examplePicture">
+                                                                <img src="img/example_image.png" class="img-responsive"/>
+                                                                <p class="text-uploader">สมชาย สวัสดี</p>
+                                                                <p class="text-upload-date">23/04/2560 14:45</p>
+                                                            </a>
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <img src="img/example_image.png" class="img-responsive"/>
+                                                            <p class="text-uploader">สมชาย สวัสดี</p>
+                                                            <p class="text-upload-date">23/04/2560 14:45</p>
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <img src="img/example_image.png" class="img-responsive"/>
+                                                            <p class="text-uploader">สมชาย สวัสดี</p>
+                                                            <p class="text-upload-date">23/04/2560 14:45</p>
+                                                        </div>
+                                                        <div class="col-md-3"  >
+                                                            <img src="img/example_image.png" class="img-responsive"/>
+                                                            <p class="text-uploader">สมชาย สวัสดี</p>
+                                                            <p class="text-upload-date">23/04/2560 14:45</p>
+                                                        </div>
+                                                    </div>
+                                               </div>
+                                            </div>
+					                </div>
+                                    <!-- Modal -->
+                                      <div class="modal fade" id="examplePicture" role="dialog">
+                                        <div class="modal-dialog  modal-lg">
+
+                                          <!-- Modal content-->
+                                          <div class="modal-content">
+                                            <div class="modal-header">
+                                              <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                              <h2 class="modal-title">รูปภาพอ่างเก็บน้ำ Test</h2>
+                                            </div>
+                                            <div class="modal-body">
+                                              <div class="row">
+                                                <div class="col-md-6 text-center">
+                                                  <img src="img/example_image.png" class="img-responsive" style="margin: 0 auto;"/>
+                                                </div>  
+                                                 <div class="col-md-6 padding-around-15">
+                                                    <form>
+                                                            <div class="row">
+                                                                <div class="form-group col-xs-12 col-sm-12">
+                                                                    <label for="demo-is-inputnormal" class="control-label">ชื่อไฟล์</label>
+                                                                    <div class="">
+                                                                        <input type="text"  class="form-control read-only"  readonly/>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="form-group col-xs-12 col-sm-12">
+                                                                    <label for="demo-is-inputnormal" class="control-label">Catagory</label>
+                                                                    <div class="">
+                                                                        <input type="text"  class="form-control read-only"  readonly/>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                 <div class="form-group col-xs-12 col-sm-12">
+                                                                    <label class="control-label">วันที่</label>
+                                                                    <div class="">
+                                                                        <input type="text"  class="form-control read-only"  readonly/>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row pad-ver">
+                                                                <div class="form-group col-xs-6 col-sm-6">
+                                                                    <label for="demo-is-inputnormal" class="control-label">เลือกเป็นภาพหลัก</label><br/>
+                                                                    <input id="demo-sw-clr1" type="checkbox" checked readonly/>
+                                                                </div>
+                                                                <div class="form-group col-xs-6 col-sm-6">
+                                                                    <label for="demo-is-inputnormal" class="control-label">แสดงใน MIS Mobile</label><br/>
+                                                                    <input id="demo-sw-clr2" type="checkbox" checked readonly/>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="form-group col-xs-12 col-sm-12">
+                                                                    <label for="demo-is-inputnormal" class="control-label">คำอธิบาย</label>
+                                                                    <div class="">
+                                                                        <textarea rows="2"  class="form-control read-only" readonly></textarea>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        
+                                                    </form>
+                                                 </div>
+                                              </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button class="btn btn-save btn-set-size" data-dismiss="modal">แก้ไขรูปภาพ</button>
+                                                <button class="btn  btn-clear btn-set-size" data-dismiss="modal">ยกเลิก</button>
+                                            </div>
+                                          </div>
+
+                                        </div>
+                                      </div>
+                                    <div id="tab-5" class="tab-pane fade form-wizard-content">
+                                        <div class="section margin-vertical--small" >
+                                                <div class="section-title" data-toggle="collapse" data-target="#section201">
+                                                    <a class="section-title-info">
+                                                      <i class="fa fa-angle-down font-size-small" aria-hidden="true"></i> วีดีทัศน์ทั้งหมดในระบบ
+                                                    </a>
+                                                </div>
+                                                <div id="section201" class="collapse in panel-body pad-no">
+                                                   <div class="row pad-ver">
+                                                        <div class="col-md-6" style="padding-top: 5px; padding-left: 5px !important;">
+                                                            <div class="col-sm-4" style="padding-top: 7px;">
+                                                                <button class="btn btn-small-toggle btn-select">
+                                                                    <i class="fa fa-th-list"></i>
+                                                                </button>
+                                                                <button class="btn btn-small-toggle btn-select">
+                                                                    <i class="fa fa-th-large"></i>
+                                                                </button>
+                                                            </div>
+                                                            <div class="form-group col-sm-8" style="width: 60%;">
+                                                                <label for="demo-is-inputnormal" class="control-label">Catagory</label>
+                                                                <select class="form-control" style="border:1px solid #e9e9e9;">
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group col-md-12 pull-right">
+                                                                <label for="demo-is-inputnormal" class="control-label">ค้นหา</label>
+                                                                <div class="">
+                                                                    <input type="text"  class="form-control" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div> 
+                                                    <div class="row">
+                                                        <div class="col-md-3" style="padding-left: 7.5px !important;">
+                                                            <img src="img/example_image2.png" class="img-responsive"/>
+                                                            <a class="text-vdo-name">VDO Name</a>
+                                                            <div class="text-vdo-create">
+                                                                <div class="text-upload-date" style="text-align: left;">สมชาย สวัสดี</div>
+                                                                <div class="text-upload-date">23/04/2560 14:45</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <img src="img/example_image2.png" class="img-responsive"/>
+                                                            <a class="text-vdo-name">VDO Name</a>
+                                                            <div class="text-vdo-create">
+                                                                <div class="text-upload-date" style="text-align: left;">สมชาย สวัสดี</div>
+                                                                <div class="text-upload-date">23/04/2560 14:45</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <img src="img/example_image2.png" class="img-responsive"/>
+                                                            <a class="text-vdo-name">VDO Name</a>
+                                                            <div class="text-vdo-create">
+                                                                <div class="text-upload-date" style="text-align: left;">สมชาย สวัสดี</div>
+                                                                <div class="text-upload-date">23/04/2560 14:45</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <img src="img/example_image2.png" class="img-responsive"/>
+                                                            <a class="text-vdo-name">VDO Name</a>
+                                                            <div class="text-vdo-create">
+                                                                <div class="text-upload-date" style="text-align: left;">สมชาย สวัสดี</div>
+                                                                <div class="text-upload-date">23/04/2560 14:45</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-3" style="padding-left: 7.5px !important;">
+                                                            <img src="img/example_image2.png" class="img-responsive"/>
+                                                            <a class="text-vdo-name">VDO Name</a>
+                                                            <div class="text-vdo-create">
+                                                                <div class="text-upload-date" style="text-align: left;">สมชาย สวัสดี</div>
+                                                                <div class="text-upload-date">23/04/2560 14:45</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <img src="img/example_image2.png" class="img-responsive"/>
+                                                            <a class="text-vdo-name">VDO Name</a>
+                                                            <div class="text-vdo-create">
+                                                                <div class="text-upload-date" style="text-align: left;">สมชาย สวัสดี</div>
+                                                                <div class="text-upload-date">23/04/2560 14:45</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <img src="img/example_image2.png" class="img-responsive"/>
+                                                            <a class="text-vdo-name">VDO Name</a>
+                                                            <div class="text-vdo-create">
+                                                                <div class="text-upload-date" style="text-align: left;">สมชาย สวัสดี</div>
+                                                                <div class="text-upload-date">23/04/2560 14:45</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <img src="img/example_image2.png" class="img-responsive"/>
+                                                            <a class="text-vdo-name">VDO Name</a>
+                                                            <div class="text-vdo-create">
+                                                                <div class="text-upload-date" style="text-align: left;">สมชาย สวัสดี</div>
+                                                                <div class="text-upload-date">23/04/2560 14:45</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-3" style="padding-left: 7.5px !important;">
+                                                            <img src="img/example_image2.png" class="img-responsive"/>
+                                                            <a class="text-vdo-name">VDO Name</a>
+                                                            <div class="text-vdo-create">
+                                                                <div class="text-upload-date" style="text-align: left;">สมชาย สวัสดี</div>
+                                                                <div class="text-upload-date">23/04/2560 14:45</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <img src="img/example_image2.png" class="img-responsive"/>
+                                                            <a class="text-vdo-name">VDO Name</a>
+                                                            <div class="text-vdo-create">
+                                                                <div class="text-upload-date" style="text-align: left;">สมชาย สวัสดี</div>
+                                                                <div class="text-upload-date">23/04/2560 14:45</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <img src="img/example_image2.png" class="img-responsive"/>
+                                                            <a class="text-vdo-name">VDO Name</a>
+                                                            <div class="text-vdo-create">
+                                                                <div class="text-upload-date" style="text-align: left;">สมชาย สวัสดี</div>
+                                                                <div class="text-upload-date">23/04/2560 14:45</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <img src="img/example_image2.png" class="img-responsive"/>
+                                                            <a class="text-vdo-name">VDO Name</a>
+                                                            <div class="text-vdo-create">
+                                                                <div class="text-upload-date" style="text-align: left;">สมชาย สวัสดี</div>
+                                                                <div class="text-upload-date">23/04/2560 14:45</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-3" style="padding-left: 7.5px !important;">
+                                                            <img src="img/example_image2.png" class="img-responsive"/>
+                                                            <a class="text-vdo-name">VDO Name</a>
+                                                            <div class="text-vdo-create">
+                                                                <div class="text-upload-date" style="text-align: left;">สมชาย สวัสดี</div>
+                                                                <div class="text-upload-date">23/04/2560 14:45</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <img src="img/example_image2.png" class="img-responsive"/>
+                                                            <a class="text-vdo-name">VDO Name</a>
+                                                            <div class="text-vdo-create">
+                                                                <div class="text-upload-date" style="text-align: left;">สมชาย สวัสดี</div>
+                                                                <div class="text-upload-date">23/04/2560 14:45</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <img src="img/example_image2.png" class="img-responsive"/>
+                                                            <a class="text-vdo-name">VDO Name</a>
+                                                            <div class="text-vdo-create">
+                                                                <div class="text-upload-date" style="text-align: left;">สมชาย สวัสดี</div>
+                                                                <div class="text-upload-date">23/04/2560 14:45</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <img src="img/example_image2.png" class="img-responsive"/>
+                                                            <a class="text-vdo-name">VDO Name</a>
+                                                            <div class="text-vdo-create">
+                                                                <div class="text-upload-date" style="text-align: left;">สมชาย สวัสดี</div>
+                                                                <div class="text-upload-date">23/04/2560 14:45</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                               </div>
+                                            </div>
+					                </div>
+                                    <div id="tab-6" class="tab-pane fade form-wizard-content">
+                                        <div class="section margin-vertical--small" >
+                                                <div class="section-title" data-toggle="collapse" data-target="#section201">
+                                                    <a class="section-title-info">
+                                                      <i class="fa fa-angle-down font-size-small" aria-hidden="true"></i> รายงานทั้งหมดในระบบ
+                                                    </a>
+                                                </div>
+                                                <div id="section201" class="collapse in panel-body pad-no">
+                                                   <div class="row pad-ver">
+                                                        <div class="form-group col-md-3">
+                                                            <label for="demo-is-inputnormal" class="control-label">Catagory</label>
+                                                            <select class="form-control" style="border:1px solid #e9e9e9;">
+                                                            </select>
+                                                        </div>
+                                                    </div> 
+                                                    <div class="row">
+                                                        <table id="report-table" class="table table-striped" cellspacing="0" width="100%">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th class="min-desktop text-center" style="vertical-align:top;"></th>
+                                                                         <th class="min-desktop text-center" style="vertical-align:top;">ชื่อไฟล์</th>
+                                                                        <th class="min-desktop text-center" style="vertical-align:top;">คำอธิบาย</th>
+                                                                        <th class="min-desktop text-center" style="vertical-align:top;">วันที่</th>
+                                                                        <th class="min-desktop text-center" style="vertical-align:top;"></th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td class="text-center"><i class="fa fa fa-file-text" style="font-size: 2em;"></i></td>
+                                                                        <td class="text-bold">รายงานระดับน้ำเดือนเมษายน ปี 2560</td>
+                                                                        <td >รายงานระดับน้ำวัดจากเครื่องมือ 4RDSFGDC โดยทำการดึงข้อมูลมาวันที่ 30/4/2560 12:50 น.</td>
+                                                                        <td class="text-center">04/04/2559 15:56 น.</td>
+                                                                        <td class="text-center"><i class="fa fa fa-trash" style="color: #C13530;"></i></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="text-center"><i class="fa fa fa-file-text" style="font-size: 2em;"></i></td>
+                                                                        <td class="text-bold">รายงานระดับน้ำเดือนเมษายน ปี 2560</td>
+                                                                        <td >รายงานระดับน้ำวัดจากเครื่องมือ 4RDSFGDC โดยทำการดึงข้อมูลมาวันที่ 30/4/2560 12:50 น.</td>
+                                                                        <td class="text-center">04/04/2559 15:56 น.</td>
+                                                                        <td class="text-center"><i class="fa fa fa-trash" style="color: #C13530;"></i></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="text-center"><i class="fa fa fa-file-text" style="font-size: 2em;"></i></td>
+                                                                        <td class="text-bold">รายงานระดับน้ำเดือนเมษายน ปี 2560</td>
+                                                                        <td >รายงานระดับน้ำวัดจากเครื่องมือ 4RDSFGDC โดยทำการดึงข้อมูลมาวันที่ 30/4/2560 12:50 น.</td>
+                                                                        <td class="text-center">04/04/2559 15:56 น.</td>
+                                                                        <td class="text-center"><i class="fa fa fa-trash" style="color: #C13530;"></i></td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                    </div>
+                                               </div>
+                                            </div>
+					                </div>
+                                    <div id="tab-7" class="tab-pane fade form-wizard-content font-size-form">
+					                    <div class="row">
+                                            <div class="col-sm-12 padding-around-15">
+                                                <img src="mockDAMS.png" width="100%" />
+                                            </div>
+                                        </div>
+					                </div>
+                                    
+					            </div>
+					        </div>
+					        <!--===================================================-->
+					        <!--End Default Tabs (Left Aligned)-->
+					    </div>
+					</div>
+                    
+                    
+					
+                </div>
+                <!--===================================================-->
+                <!--End page content-->
+
+
+            </div>
+            <!--===================================================-->
+            <!--END CONTENT CONTAINER-->
+
+
+           
+            <!--MAIN NAVIGATION-->
+            <!--===================================================-->
+            <nav id="mainnav-container">
+                <div id="mainnav">
+
+                    <!--Menu-->
+                    <!--================================-->
+                    <div id="mainnav-menu-wrap">
+                        <div class="nano">
+                            <div class="nano-content">
+
+                                <!--Profile Widget-->
+                                <!--================================-->
+                                <div id="mainnav-profile" class="mainnav-profile" >
+                                    <div class="profile-wrap">
+                                        <div class="pad-btm text-center">
+                                            <img class="img-circle img-sm img-border" src="img/profile-photos/1.png" alt="Profile Picture">
+                                        </div>
+                                        <a href="#profile-nav" class="box-block" data-toggle="collapse" aria-expanded="false">
+                                            <span class="pull-right dropdown-toggle">
+                                                <i class="dropdown-caret"></i>
+                                            </span>
+                                            <p class="mnp-name">Aaron Chavez</p>
+                                            <span class="mnp-desc">aaron.cha@mail.com</span>
+                                        </a>
+                                    </div>
+                                    <div id="profile-nav" class="collapse list-group bg-trans">
+                                        <a href="#" class="list-group-item">
+                                            <i class="demo-pli-male icon-lg icon-fw"></i> View Profile
+                                        </a>
+                                        <a href="#" class="list-group-item">
+                                            <i class="demo-pli-gear icon-lg icon-fw"></i> Settings
+                                        </a>
+                                        <a href="#" class="list-group-item">
+                                            <i class="demo-pli-information icon-lg icon-fw"></i> Help
+                                        </a>
+                                        <a href="#" class="list-group-item">
+                                            <i class="demo-pli-unlock icon-lg icon-fw"></i> Logout
+                                        </a>
+                                    </div>
+                                </div>
+                                <!--End shortcut buttons-->
+
+                                <ul id="mainnav-menu" class="list-group " >
+						
+						            <!--Category name-->
+						            <li class="list-header">Navigation</li>
+						
+						            <!--Menu list item-->
+						            <li>
+						                <a href="index.html">
+						                    <i class="demo-psi-home"></i>
+						                    <span class="menu-title ">
+												หน้าแรก
+											</span>
+						                </a>
+						            </li>
+                                    <li>
+						                <a href="#">
+						                    <i class="fa fa-area-chart"></i>
+						                    <span class="menu-title ">
+												สรุปรายงาน
+											</span>
+						                </a>
+						            </li>
+                                    <li>
+						                <a href="#" class="active-child">
+						                    <i class="fa fa-book"></i>
+						                    <span class="menu-title">
+												ข้อมูลทั่วไป
+											</span>
+											<i class="arrow"></i>
+						                </a>
+						
+						                <!--Submenu-->
+						                <ul class="collapse in">
+						                    <li  class="active-link"><a href="#">อ่างเก็บน้ำ</a></li>
+											<li  ><a href="dams-newedit.html">เขื่อน</a></li>
+						                </ul>
+						            </li>
+                                    <li>
+						                <a href="#">
+						                    <i class="fa fa-tachometer"></i>
+						                    <span class="menu-title ">
+												เครื่องมือวัดพฤติกรรมเขื่อน 
+											</span>
+						                </a>
+						            </li>
+                                    <li>
+						                <a href="#">
+						                    <i class="fa fa-list-alt"></i>
+						                    <span class="menu-title ">
+												การประเมินสภาพเขื่อนด้วยวิธีดัชนีสภาพ (CI) 
+											</span>
+						                </a>
+						            </li>
+                                    <li>
+						                <a href="#" >
+						                    <i class="fa fa-heartbeat"></i>
+						                    <span class="menu-title">
+												แผ่นดินไหว
+											</span>
+											<i class="arrow"></i>
+						                </a>
+						
+						                <!--Submenu-->
+                                        <ul class="collapse">
+						                    <li><a href="earthquake.html">บันทึกเหตุการณ์แผ่นดินไหว</a></li>
+                                            <li><a href="#">บันทึกเครื่องมือวัด</a></li>
+                                            <li><a href="#">สถานีวัดแผ่นดินไหว</a></li>
+                                            <li><a href="#">แผนที่ตำแหน่งติดตั้งสถานีวัดแผ่นดินไหว</a></li>
+                                            <li><a href="#">เว็ปไซด์ที่เกี่ยวข้องกับแผ่นดินไหว</a></li>
+						                </ul>
+						            </li>
+                                    <li>
+						                <a href="#">
+						                    <i class="fa fa-folder-open"></i>
+						                    <span class="menu-title">
+												เอกสารส่วนกลาง (DAMS)
+											</span>
+                                        </a>
+						            </li>
+                                    <li>
+						                <a href="#">
+						                    <i class="fa fa-building"></i>
+						                    <span class="menu-title">
+												ข้อมูลกรมชลประทาน
+											</span>
+						                </a>
+						            </li>
+                                    <li>
+						                <a href="#">
+						                    <i class="demo-psi-split-vertical-2"></i>
+						                    <span class="menu-title ">
+												แผนผังเว็ปไซด์
+											</span>
+						                </a>
+						            </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!--================================-->
+                    <!--End menu-->
+
+                </div>
+            </nav>
+            <!--===================================================-->
+            <!--END MAIN NAVIGATION-->
+
+        </div>
+
+        
+
+        <!-- FOOTER -->
+        <!--===================================================-->
+        <footer id="footer">
+
+            <!-- Visible when footer positions are fixed -->
+            <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+            <div class="show-fixed pull-right">
+                You have <a href="#" class="text-bold text-main"><span class="label label-danger">3</span> pending action.</a>
+            </div>
+
+            <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+            <!-- Remove the class "show-fixed" and "hide-fixed" to make the content always appears. -->
+            <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+            <p class="pad-lft">&#0169; 2017 Your Company</p>
+
+
+
+        </footer>
+        <!--===================================================-->
+        <!-- END FOOTER -->
+
+
+        <!-- SCROLL PAGE BUTTON -->
+        <!--===================================================-->
+        <button class="scroll-top btn">
+            <i class="pci-chevron chevron-up"></i>
+        </button>
+        <!--===================================================-->
+
+
+
+    </div>
+    <!--===================================================-->
+    <!-- END OF CONTAINER -->
+
+     
+    <script src="js/custom.js"></script>
+    
+
+
+</body>
+</html>
+
