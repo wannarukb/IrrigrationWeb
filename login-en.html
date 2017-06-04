@@ -104,12 +104,14 @@
 		                <p class="text-logo pad-top ">Login</p>
 		            </div>
 		            <form action="index.html">
-		                <div class="form-group pad-ver-small">
-		                    <input type="text" class="form-control" placeholder="Username" autofocus>
-		                </div>
-		                <div class="form-group pad-ver-small">
-		                    <input type="password" class="form-control" placeholder="Password">
-		                </div>
+                        <div class="form-group has-feedback ">
+                            <input type="text" id="demo-oi-username" class="form-control border-bottom" placeholder="Username" autofocus>
+                            <i class="fa fa-user icon-lg form-control-feedback"></i>
+                        </div><br/>
+		                <div class="form-group has-feedback">
+                            <input type="password" id="demo-oi-password" class="form-control border-bottom" >
+                            <i class="fa fa fa-lock icon-lg form-control-feedback"></i>
+                        </div>
                         <div class="row pad-top">
                             <div class="col-sm-5 text-left login-des-font-small">Forgot Password ?</div>
                             <div class="col-sm-7 text-right">

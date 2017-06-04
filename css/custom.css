@@ -537,3 +537,9 @@ Nav Bar - left
 .text-panel{
     font-size: 1.6em !important;
 }
+
+.border-bottom{
+   border-left: 0px;
+    border-right: 0px;
+    border-top: 0px;
+}
