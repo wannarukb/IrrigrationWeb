@@ -9,7 +9,6 @@
 
     <!--STYLESHEET-->
     <!--=================================================-->
-
     <!--Open Sans Font [ OPTIONAL ]-->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
 
@@ -28,6 +27,13 @@
 
     <!--Demo [ DEMONSTRATION ]-->
     <link href="css/demo/nifty-demo.min.css" rel="stylesheet">
+
+
+        
+    <!--Dropzone [ OPTIONAL ]-->
+    <link href="plugins/dropzone/dropzone.css" rel="stylesheet">
+
+    <!--Demo [ DEMONSTRATION ]-->
     <link href="css/fontTH.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
     <link href="plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
@@ -38,6 +44,14 @@
 
     <!--Bootstrap Datepicker [ OPTIONAL ]-->
     <link href="plugins/bootstrap-datepicker/bootstrap-datepicker.min.css" rel="stylesheet">
+    
+            
+    <!--Magic Checkbox [ OPTIONAL ]-->
+    <link href="plugins/magic-check/css/magic-check.min.css" rel="stylesheet">
+   
+    <!--Switchery [ OPTIONAL ]-->
+    <link href="plugins/switchery/switchery.min.css" rel="stylesheet">
+
 
     <!--JAVASCRIPT-->
     <!--=================================================-->
@@ -58,48 +72,28 @@
     <!--NiftyJS [ RECOMMENDED ]-->
     <script src="js/nifty.min.js"></script>
    
-
+    
     <!--=================================================-->
     
     <!--Demo script [ DEMONSTRATION ]-->
     <script src="js/demo/nifty-demo.min.js"></script>
-        
-    <!--Gmaps [ OPTIONAL ]-->
-<!--    <script src="http://maps.google.com/maps/api/js?sensor=true"></script>-->
-     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBrCXuA3G8Wt3z3af-Ba_Uw9NL6dH12bQ&sensor=true">
-    </script>
-	<script src="plugins/gmaps/gmaps.js"></script>
-
-
-    <!--Map Example [ SAMPLE ]-->
-    <script src="js/demo/map-geocoding.js"></script>
-
-     
-    <!--DataTables [ OPTIONAL ]-->
-    <link href="plugins/datatables/media/css/dataTables.bootstrap.css" rel="stylesheet">
-	<link href="plugins/datatables/extensions/Responsive/css/dataTables.responsive.css" rel="stylesheet">
-   <!--DataTables [ OPTIONAL ]-->
-    <script src="plugins/datatables/media/js/jquery.dataTables.js"></script>
-	<script src="plugins/datatables/media/js/dataTables.bootstrap.js"></script>
-	<script src="plugins/datatables/extensions/Responsive/js/dataTables.responsive.min.js"></script>
-
-
-    <!--DataTables Sample [ SAMPLE ]-->
-    <script src="js/demo/tables-datatables.js"></script>
-
     
+    <!--Switchery [ OPTIONAL ]-->
+    <script src="plugins/switchery/switchery.min.js"></script>
     
-      <!--Bootstrap Timepicker [ OPTIONAL ]-->
+    <!--Bootstrap Timepicker [ OPTIONAL ]-->
     <script src="plugins/bootstrap-timepicker/bootstrap-timepicker.min.js"></script>
 
 
     <!--Bootstrap Datepicker [ OPTIONAL ]-->
     <script src="plugins/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
-
-
+    
+    
     <!--Form Component [ SAMPLE ]-->
     <script src="js/demo/form-compoment-date-time.js"></script>
-
+    <script src="js/demo/form-component.js"></script>
+ 
+     
 
 </head>
 
@@ -201,25 +195,32 @@
             <!--===================================================-->
             <div id="content-container">
                 
-                <!--Page Title-->
-                <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-                <div id="page-title">
-                    <h1 class="page-header text-overflow font-th font-size-header">บันทึกเหตุการณ์แผ่นดินไหว</h1>
+                <div class="row">
+                    <div class="col-md-6">
+                        <!--Page Title-->
+                        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                        <div id="page-title">
+                            <h1 class="page-header text-overflow font-th font-size-header">เว็ปไซด์ที่เกี่ยวข้องกับแผ่นดินไหว</h1>
 
+                        </div>
+                        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                        <!--End page title-->
+
+
+                        <!--Breadcrumb-->
+                        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                        <ol class="breadcrumb font-th font-size-breadcrumb">
+                            <li><a href="#">แผ่นดินไหว</a></li>
+                            <li class="active">เว็ปไซด์ที่เกี่ยวข้องกับแผ่นดินไหว</li>
+                        </ol>
+                        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                        <!--End breadcrumb-->
+                    </div>
+                    
+                    <div class="col-md-6 text-right pad-all-big font-th">
+                        <a class="btn btn-save font-big btn-set-size-big" href="website-earthquake-edit.html">แก้ไขข้อมูล</a>
+                    </div>
                 </div>
-                <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-                <!--End page title-->
-
-
-                <!--Breadcrumb-->
-                <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-                <ol class="breadcrumb font-th font-size-breadcrumb">
-<!--					<li><a href="#">Home</a></li>-->
-					<li><a href="#">แผ่นดินไหว</a></li>
-					<li class="active">บันทึกเหตุการณ์แผ่นดินไหว</li>
-                </ol>
-                <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-                <!--End breadcrumb-->
 
 
         
@@ -227,148 +228,45 @@
                 <!--Page content-->
                 <!--===================================================-->
                 <div id="page-content" class="font-th">
-                <!-- Add Row -->
-					<!--===================================================-->
                     <div class="row">
 					    <div class="col-lg-12">
-					        <div class="panel">
-					            <div class="panel-heading">
-					                <h3 class="panel-title  font-size-header-small">บันทึกเหตุการณ์แผ่นดินไหว</h3>
-					            </div>
-					
-					
-					            <!--Input Size-->
-					            <!--===================================================-->
-					            <form  class="form-horizontal">
-					                <div class="panel-body">
-					                    <div class="form-group col-xs-12 col-sm-6 col-md-6 col-lg-6 ">
-					                        <div class="row margin-vertical--small">
-                                                <label for="demo-is-inputnormal" class="col-sm-4 control-label">วันที่</label>
-                                                <div id="demo-dp-component" class="col-sm-8">
-                                                    <div class="input-group date">
-					                                    <input type="text" class="form-control">
-					                                    <span class="input-group-addon" style="padding: 2px 12px;"><i class="demo-pli-calendar-4"></i></span>
-					                                </div>
-                                                </div>
-                                            </div>
-                                            <div class="row margin-vertical--small">
-                                                <label for="demo-is-inputnormal" class="col-sm-4 control-label">เวลา</label>
-                                                <div class="col-sm-8">
-                                                    <div class="input-group date">
-                                                        <input id="demo-tp-com" type="text" class="form-control" >
-                                                        <span class="input-group-addon" style="padding: 2px 12px;"><i class="demo-pli-clock"></i></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row margin-vertical--small">
-                                                <label for="demo-is-inputnormal" class="col-sm-4 control-label">ชื่อแผ่นดินไหว</label>
-                                                <div class="col-sm-8">
-                                                    <input type="text"  class="form-control" id="demo-is-inputnormal"/>
-                                                </div>
-                                            </div>
-                                            <div class="row margin-vertical--small">
-                                                <label for="demo-is-inputnormal" class="col-sm-4 control-label">ความลึก</label>
-                                                <div class="col-sm-8">
-                                                    <input type="text"  class="form-control" id="demo-is-inputnormal">
-                                                </div>
-                                            </div>
-                                            <div class="row margin-vertical--small">
-                                                <label for="demo-is-inputnormal" class="col-sm-4 control-label">ความรุนแรง</label>
-                                                <div class="col-sm-8">
-                                                    <input type="text"  class="form-control" id="demo-is-inputnormal">
-                                                </div>
-                                            </div>
-                                            <div class="row margin-vertical--small">
-                                                <label for="demo-is-inputnormal" class="col-sm-4 control-label">รายละเอียด</label>
-                                                <div class="col-sm-8">
-                                                    <textarea   class="form-control" id="demo-is-inputnormal"></textarea>
-                                                </div>
-                                            </div>
-					                    </div>
-					                    
-                                        <div class="form-group col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                                            <div class="row margin-vertical--small">
-                                                <label for="demo-is-inputnormal" class="col-sm-4 control-label">ละติจูด</label>
-                                                <div class="col-sm-8">
-                                                    <input type="text" id="latitute"  class="form-control" id="demo-is-inputnormal">
-                                                </div>
-                                            </div>
-                                            <div class="row margin-vertical--small">
-                                                <label for="demo-is-inputnormal" class="col-sm-4 control-label">ลองจิจูด</label>
-                                                <div class="col-sm-8">
-                                                    <input type="text" id="longitude" class="form-control" id="demo-is-inputnormal">
-                                                </div>
-                                            </div>
-                                            <div class="row margin-vertical--small">
-                                                    <div class="col-sm-10">
-                                                         <input type="text" placeholder="Address..." class=" form-control" id="demo-geocoding-address">
-                                                    </div>
-                                                    <dvi class="col-sm-2">
-                                                        <button id="sumbitGeoCoding" type="button" value="Search" class="btn btn-default btn-small">Search</button>
-                                                    </dvi>
-                                            </div>
-                                            <div class="row margin-vertical--small">
-                                                <div id="demo-geocoding-map" style="height:300px"></div>
-                                            </div>
-                                         
-					                    </div>
-					                    
-					                </div>
-					                <div class="panel-footer">
-					                    <div class="row">
-					                        <div class="col-md-12 text-center">
-					                            <button class="btn btn-save btn-set-size" type="submit">บันทึก</button>
-					                            <button class="btn btn-clear btn-set-size" type="reset">ล้างข้อมูล</button>
-					                        </div>
-					                    </div>
-					                </div>
-					            </form>
-					            <!--===================================================-->
-					            <!--End Input Size-->
-					
-					
+					        <div class="panel pad-all-big">
+                                <div class="row mar-ver-small">
+                                    <div class="col-md-1">
+                                        <img src="img/example_image.png" class="img-responsive"/>
+                                    </div>
+                                    <div class="col-md-11">
+                                        <a class="text-primary-color text-bold" style="font-size: 2em;">USGS</a><br/>
+                                        <p class="text-description">
+                                           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="row mar-ver-small">
+                                    <div class="col-md-1">
+                                        <img src="img/example_image.png" class="img-responsive"/>
+                                    </div>
+                                    <div class="col-md-11">
+                                        <a class="text-primary-color text-bold" style="font-size: 2em;">IRIS</a><br/>
+                                        <p class="text-description">
+                                           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="row mar-ver-small">
+                                    <div class="col-md-1">
+                                        <img src="img/example_image.png" class="img-responsive"/>
+                                    </div>
+                                    <div class="col-md-11">
+                                        <a class="text-primary-color text-bold" style="font-size: 2em;">สำนักงานเฝ้าระวังแผ่นดินไหว กรมอุตุนิยมวิทยา</a><br/>
+                                        <p class="text-description">
+                                           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                                        </p>
+                                    </div>
+                                </div>
 					        </div>
 					    </div>
 					</div>
-                    
-                    <!-- Table -->
-					<div class="panel">
-					    <div class="panel-heading">
-					        <h3 class="panel-title  font-size-header-small">เหตุการณ์แผ่นดินไหว</h3>
-					    </div>
-                        
-					    <div class="panel-body">
-					        <table id="demo-dt-addrow" class="table table-striped table-bordered" cellspacing="0" width="100%">
-					            <thead>
-					                <tr>
-					                    <th class="min-tablet text-center">ชื่อแผ่นดินไหว</th>
-					                    <th class="min-desktop text-center">วัน เวลา</th>
-					                    <th class="min-desktop text-center">ความลึก (กม.)</th>
-                                        <th class="min-desktop text-center">ความรุนแรง (ริคเตอร์)</th>
-                                        <th class="min-desktop text-center">ละติจูด</th>
-                                        <th class="min-desktop text-center">ลองจิจูด</th>
-                                        <th class="min-desktop text-center">รายละเอียด</th>
-					                </tr>
-					            </thead>
-					            <tbody>
-					                <tr>
-					                    <td class="text-center"><a href="earthquake-detail-edit.html"><u>แผ่นดินไหวเมือง A</u></a></td>
-					                    <td class="text-center">04/04/2543 15:56</td>
-					                    <td class="text-center">61</td>
-					                    <td class="text-center">6.3</td>
-					                    <td class="text-center">19.0342</td>
-					                    <td class="text-center">105.234234</td>
-                                        <td class="text-center">-</td>
-					                </tr>
-					            </tbody>
-					        </table>
-					    </div>
-					</div>
-					<!--===================================================-->
-					<!-- End Add Row -->
-					
-					
-					
                 </div>
                 <!--===================================================-->
                 <!--End page content-->
@@ -379,6 +277,7 @@
             <!--END CONTENT CONTAINER-->
 
 
+           
             <!--MAIN NAVIGATION-->
             <!--===================================================-->
             <nav id="mainnav-container">
@@ -479,11 +378,11 @@
 						
 						                <!--Submenu-->
                                         <ul class="collapse in">
-						                    <li class="active-link" ><a href="earthquake.html">บันทึกเหตุการณ์แผ่นดินไหว</a></li>
+						                    <li  ><a href="earthquake.html">บันทึกเหตุการณ์แผ่นดินไหว</a></li>
                                             <li><a href="#">บันทึกเครื่องมือวัด</a></li>
                                             <li><a href="#">สถานีวัดแผ่นดินไหว</a></li>
                                             <li><a href="#">แผนที่ตำแหน่งติดตั้งสถานีวัดแผ่นดินไหว</a></li>
-                                            <li><a href="website-earthquake.html">เว็ปไซด์ที่เกี่ยวข้องกับแผ่นดินไหว</a></li>
+                                            <li class="active-link"><a href="website-earthquake.html">เว็ปไซด์ที่เกี่ยวข้องกับแผ่นดินไหว</a></li>
 						                </ul>
 						            </li>
                                     <li>
@@ -562,7 +461,8 @@
     <!--===================================================-->
     <!-- END OF CONTAINER -->
 
-
+     
+    <script src="js/custom.js"></script>
     
 
 
