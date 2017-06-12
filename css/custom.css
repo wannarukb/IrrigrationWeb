@@ -22,6 +22,9 @@
 .font-size-small{
     font-size: 0.7em !important;
 }
+.font-size-medium{
+    font-size: 0.9em !important;
+}
 .font-size-header-small{
     font-size: 1.8em !important;
 /*    font-weight: 500 !important;*/
@@ -460,6 +463,8 @@ Nav Bar - left
 .login-background{
     background: url('../img/IMG_0987.jpg');
     width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .text-logo{

@@ -53,7 +53,15 @@ $(window).on('load', function() {
         }
     } );
 
-
+    $('#dam-instrument-report').dataTable( {
+        "responsive": true,
+        "language": {
+            "paginate": {
+              "previous": '<i class="demo-psi-arrow-left"></i>',
+              "next": '<i class="demo-psi-arrow-right"></i>'
+            }
+        }
+    } );
 
 
 
