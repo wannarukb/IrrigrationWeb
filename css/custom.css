@@ -354,6 +354,32 @@ snippet from Animate.css - zoomIn effect
     font-size: 0.9em !important;
     padding: 0 !important;
 }
+
+/* NAVBAR RESPONSIVE */
+/*======================================*/
+@media (max-width: 768px) {
+/*
+  #dropdown-user > .dropdown-toggle img {
+    -webkit-transform: translateY(4px);
+    -ms-transform: translateY(4px);
+    transform: translateY(4px);
+  }
+  #navbar {
+    background-color: transparent;
+  }
+*/
+  .navbar-header {
+    background-color: #FFF !important;
+  }
+    
+ .navbar-top-links .tgl-menu-btn>a, .navbar-top-links .tgl-menu-btn>a:hover, .navbar-top-links .tgl-menu-btn>a:focus {
+    color: #14315D;
+  }
+  #container.mainnav-in.footer-fixed #footer, #container.mainnav-in #navbar, #container.mainnav-in #content-container, #container.mainnav-in #footer {
+    left : 230px;
+    }
+}
+
 /*
 Nav Bar - left
 */
